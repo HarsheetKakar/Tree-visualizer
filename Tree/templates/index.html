@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    {% block scripts %}
+    {% endblock %}
+    <title>Binary Search Tree</title>
+  </head>
+  <body>
+    {% block body %}
+    <div class="jumbotron text-center">
+      <h1>Tree Algorithm visualization</h1>
+    </div>
+    <form class="form-inline text-center" action="{{url_for('tree')}}" method = "POST"> <!-- TODO: connect action to server -->
+
+      <div class="form-group">
+        <label class="sr-only" for="array">Array</label>
+        <input type="text" class="form-control" id="array" name="array">
+      </div>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    {% endblock %}
+  </body>
+</html>
