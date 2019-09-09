@@ -12,7 +12,7 @@ class Node{
   }
 }
 
-class Tree{
+class AVLTree{
   constructor(A=[],x,y){
     this.root = null;
     this.initial_x = x;
@@ -29,7 +29,7 @@ class Tree{
   }//builds Tree from an array
 
   x_factor(depth){
-    return 35+112/(2*(depth+1));
+    return 70+112*2/(5*(depth+1))+10;
   }
 
   y_factor(depth){

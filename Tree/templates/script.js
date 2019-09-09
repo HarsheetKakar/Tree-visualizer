@@ -1,11 +1,6 @@
-wW = document.documentElement.clientWidth;
-wH = document.documentElement.clientHeight;
-t = new Tree({{result}},wW/2,100); // change it to {{result}} when tests are done
-/* creating a tree in memory */
-
-
 function setup(){
-  createCanvas(windowWidth,windowHeight)
+  createCanvas(windowWidth,windowHeight);
+  t = new AVLTree({{result}},windowWidth/2,100);
 }
 
 function createNode(x,y,val,depth){
