@@ -8,11 +8,13 @@ function setup(){
   createCanvas(windowWidth,windowHeight)
 }
 
-function createNode(x,y,val){
+function createNode(x,y,val,depth){
   fill(0);
   ellipse(x,y,30,30);
-  fill(255)
+  fill(255);
   text(val,x-5,y+5);
+  fill(0);
+  text(depth,x+20,y);
 }
 
 function connect(start,end){
@@ -29,7 +31,7 @@ function drawTree(root){
   if(root.right){
     connect(root,root.right);
   }
-  createNode(root.position.x,root.position.y,root.val);
+  createNode(root.position.x,root.position.y,root.val,root.depth);
   drawTree(root.left);
   drawTree(root.right);
 }
